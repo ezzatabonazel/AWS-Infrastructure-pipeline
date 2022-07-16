@@ -17,7 +17,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  subnet_id = aws_subnet.public1.id
+  subnet_id = module.network.public1_subnet_id
   key_name = aws_key_pair.generated_key.key_name
   vpc_security_group_ids = [aws_security_group.sg.id]
   tags = {
@@ -32,7 +32,7 @@ resource "aws_instance" "web" {
 resource "aws_instance" "application" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  subnet_id = aws_subnet.private2.id
+  subnet_id = module.network.private1_subnet_id
   key_name = aws_key_pair.generated_key.key_name
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   tags = {
