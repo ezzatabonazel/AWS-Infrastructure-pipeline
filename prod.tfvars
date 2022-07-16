@@ -1,0 +1,7 @@
+region = "us-east-1"
+vpc_CIDR="10.0.0.0/16"
+private1_subnet_CIDR="10.0.0.0/24"
+private2_subnet_CIDR="10.0.2.0/24"
+public1_subnet_CIDR="10.0.1.0/24"
+public2_subnet_CIDR="10.0.3.0/24"
+instance_type="t2.micro"

@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg" {
-  name = "sec-grp"
+  name = "allow_ssh"
   description = "Allow SSH traffic "
 
   vpc_id      = aws_vpc.myvpc.id
@@ -22,7 +22,7 @@ resource "aws_security_group" "sg" {
 
 
 resource "aws_security_group" "demo-sg" {
-  name = "sec-grp2"
+  name = "sg1"
   description = "Allow HTTP and port 3000 traffic"
    vpc_id      = aws_vpc.myvpc.id
 
