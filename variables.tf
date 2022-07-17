@@ -24,3 +24,26 @@ variable "public2_subnet_CIDR"{
 variable "instance_type"{
 type= string
 }
+
+variable "engine" {
+    type= string
+}
+variable "engine_version" {
+    type= string
+}     
+variable "instance_class" {
+    type= string
+}
+
+variable "name"  {
+    type= string
+}       
+variable "username" {
+    type= string
+}  
+variable "password" {
+    type= string
+} 
+variable "parameter_group_name" {
+    type= string
+}
