@@ -1,49 +1,49 @@
 variable "region" {
-    type= string 
+  type = string
 }
 
-variable "vpc_CIDR"{
-    type= string 
+variable "vpc_CIDR" {
+  type = string
 }
 
-variable "private1_subnet_CIDR"{
-    type= string 
+variable "private1_subnet_CIDR" {
+  type = string
 }
 
-variable "private2_subnet_CIDR"{
-    type= string 
+variable "private2_subnet_CIDR" {
+  type = string
 }
-variable "public1_subnet_CIDR"{
-    type= string 
-}
-
-variable "public2_subnet_CIDR"{
-    type= string 
+variable "public1_subnet_CIDR" {
+  type = string
 }
 
-variable "instance_type"{
-type= string
+variable "public2_subnet_CIDR" {
+  type = string
+}
+
+variable "instance_type" {
+  type = string
 }
 
 variable "engine" {
-    type= string
+  type = string
 }
 variable "engine_version" {
-    type= string
-}     
+  type = string
+}
 variable "instance_class" {
-    type= string
+  type = string
 }
 
-variable "name"  {
-    type= string
-}       
+variable "name" {
+  type = string
+}
 variable "username" {
-    type= string
-}  
+  type = string
+}
 variable "password" {
-    type= string
-} 
+  type = string
+}
 variable "parameter_group_name" {
-    type= string
+  type = string
 }

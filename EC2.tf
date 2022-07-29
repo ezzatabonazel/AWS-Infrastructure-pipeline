@@ -15,25 +15,25 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
-  subnet_id = module.network.public1_subnet_id
-  key_name = aws_key_pair.generated_key.key_name
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = var.instance_type
+  subnet_id              = module.network.public1_subnet_id
+  key_name               = aws_key_pair.generated_key.key_name
   vpc_security_group_ids = [aws_security_group.sg.id]
   tags = {
     Name = "pastion-ec2"
   }
 
-   provisioner "local-exec" {
+  provisioner "local-exec" {
     command = "echo ${self.public_ip} ${var.region} >> public_ips.txt"
   }
 }
 
 resource "aws_instance" "application" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
-  subnet_id = module.network.private1_subnet_id
-  key_name = aws_key_pair.generated_key.key_name
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = var.instance_type
+  subnet_id              = module.network.private1_subnet_id
+  key_name               = aws_key_pair.generated_key.key_name
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   tags = {
     Name = "application-ec2"

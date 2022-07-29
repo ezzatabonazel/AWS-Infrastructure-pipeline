@@ -1,8 +1,8 @@
 resource "aws_security_group" "sg" {
-  name = "allow_ssh"
+  name        = "allow_ssh"
   description = "Allow SSH traffic "
 
-  vpc_id      = module.network.vpc_id
+  vpc_id = module.network.vpc_id
 
 
   ingress {
@@ -22,9 +22,9 @@ resource "aws_security_group" "sg" {
 
 
 resource "aws_security_group" "demo-sg" {
-  name = "sg1"
+  name        = "sg1"
   description = "Allow HTTP and port 3000 traffic"
-   vpc_id      = module.network.vpc_id
+  vpc_id      = module.network.vpc_id
 
   ingress {
     from_port   = 3000
