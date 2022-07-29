@@ -1,4 +1,4 @@
-region               = "eu-central-1"
+region               = "eu-west-1"
 vpc_CIDR             = "10.0.0.0/16"
 private1_subnet_CIDR = "10.0.0.0/24"
 private2_subnet_CIDR = "10.0.2.0/24"
