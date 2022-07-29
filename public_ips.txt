@@ -4,3 +4,4 @@
 18.196.249.15 eu-central-1
 3.68.198.90 eu-central-1
 3.72.40.200 eu-central-1
+44.199.226.12 us-east-1
