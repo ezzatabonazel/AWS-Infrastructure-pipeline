@@ -9,7 +9,7 @@ resource "aws_secretsmanager_secret" "secrets" {
 
 #------------------- export private ssh key to secrets managers-------------
 resource "aws_secretsmanager_secret_version" "privatekey" {
-  secret_id     = aws_secretsmanager_secret.secret.id
+  secret_id     = aws_secretsmanager_secret.secrets.id
   secret_string = tls_private_key.private_key.private_key_pem
 
 }
