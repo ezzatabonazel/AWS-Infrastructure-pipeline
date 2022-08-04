@@ -4,27 +4,22 @@ pipeline {
   terraform 'terraform2'
 }
 stages {
-     stage('clone repo'){
-        steps{
-             git 'https://github.com/ezzatabonazel/terraform.git'
-            }
-        }
         stage('terraform format check') {
             steps{
-               sh 'terraform fmt'
+               sh 'terraform -chdir=./terraform/ fmt'
             }
         }
         stage('terrafrom init'){
             steps{
                 withAWS(credentials: 'myaccess') {
-                    sh 'terraform init'
+                    sh 'terraform -chdir=./terraform/ init'
                 }
             }
         }
             stage('terrafrom apply'){
                 steps{
                     withAWS(credentials: 'myaccess') {
-                         sh 'terraform apply --var-file=dev.tfvars --auto-approve'
+                         sh 'terraform -chdir=./terraform/ apply --var-file=dev.tfvars --auto-approve'
                     }
                 }
             }
