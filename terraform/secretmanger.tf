@@ -1,7 +1,7 @@
 
 #---------------create secrets Manager -----------------
 resource "aws_secretsmanager_secret" "secrets_manager" {
-  name = "secret-key"
+  name = "secretkey"
   rotation_rules {
     automatically_after_days = 0
   }
