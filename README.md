@@ -79,7 +79,7 @@ For Terraform
 - Press 'save' and 'Build Now'  the pipeline
 
 <p align='center'>
-<img src="buildcheck/pipeline.png" alt="architecture" width="80%" height="80%"/>
+<img src="screenshots/buildcheck.png" alt="architecture" width="80%" height="80%"/>
 </p>
 
 ## 4- private EC2 to be Jenkins slave
