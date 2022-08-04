@@ -1,0 +1,11 @@
+Host bastion
+   User ubuntu
+   Hostname 3.250.148.252
+   identityFile /var/jenkins_home/.ssh/key.pem
+
+Host private-ec2
+   Hostname 10.0.0.80
+   ProxyJump bastion
+   user  ubuntu
+   identityFile /var/jenkins_home/.ssh/key.pem
+
