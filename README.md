@@ -63,13 +63,13 @@ For Terraform
 - - Install the "Terraform" plugin and configure under "Manage Jenkins" and "Global Tool Configuration" as follows:
 
 <p align='center'>
-<img src="screenshots/terraform.jpg" alt="architecture" width="80%" height="80%"/>
+<img src="screenshots/terraform.png" alt="architecture" width="80%" height="80%"/>
 </p>
 
 - Note: verify that terraform version is compatible with your OS
 
 
-## 3- create a new Item
+## 3- create a New Item
 
 - configure it as follows:
 <p align='center'>
@@ -130,7 +130,7 @@ $ docker cp <key.pem> <CONTAINER-ID>:/var/jenkins_home/<key.pem>
 - From Web Page Under "Manage Nodes and Clouds", choose to create a "New Node", give it a name and configure it as follows:
 
 <p align='center'>
-<img src="screenshots/ec2slave.jpg" alt="architecture" width="80%" height="80%"/>
+<img src="screenshots/ec2slave.png" alt="architecture" width="80%" height="80%"/>
 </p>
 
 * Command used to connect is:
@@ -141,7 +141,7 @@ $ ssh  private-ec2 exec java -jar /home/ubuntu/bin/agent.jar
 Press 'save' and 'launch agent'
 
 <p align='center'>
-<img src="screenshots/ec2slavecheck.jpg" alt="architecture" width="80%" height="80%"/>
+<img src="screenshots/ec2slavecheck.png" alt="architecture" width="80%" height="80%"/>
 </p>
 
 ## 4- Next Steps: Deploying Node.js App on Slave
