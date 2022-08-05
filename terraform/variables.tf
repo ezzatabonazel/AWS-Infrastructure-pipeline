@@ -41,9 +41,7 @@ variable "name" {
 variable "username" {
   type = string
 }
-variable "password" {
-  type = string
-}
+
 variable "parameter_group_name" {
   type = string
 }
