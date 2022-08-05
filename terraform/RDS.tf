@@ -10,11 +10,12 @@ resource "aws_db_instance" "mydb" {
   # User to connect the database instance 
   username = var.username
   # Password to connect the database instance 
-  password             = var.password
+  password             = random_password.random.result
   parameter_group_name = var.parameter_group_name
 
   db_subnet_group_name = aws_db_subnet_group.subnets.id
   skip_final_snapshot  = true
+  vpc_security_group_ids = [aws_security_group.rds_sg.id]
 }
 
 
