@@ -164,7 +164,7 @@ Using Jenkins pipeline, deploying a node.js application on a Jenkins slave (priv
 
 - Edit the Jenkinsfile to include the endpoints of both your RDS and ElastiCache instances 
 
-### 2- Creating and Running Pipeline
+### 2- Creating and Running Pipeline:
 - Create a pipeline as follows:
 <p align='center'>
 <img src="screenshots/cicd.png" alt="architecture" width="80%" height="80%"/>
@@ -173,11 +173,11 @@ Using Jenkins pipeline, deploying a node.js application on a Jenkins slave (priv
 - Then press 'save' and 'Build Now'
 
 <p align='center'>
-<img src="screenshots/build.png" alt="architecture" width="80%" height="80%"/>
+<img src="screenshots/bilud.png" alt="architecture" width="80%" height="80%"/>
 </p>
 
 
-### 3- create ALB with terraform to Expose the Node-js :
+### 3- create ALB with terraform to Expose the Node-js:
 
 ### 4- Test your application:
 
@@ -197,7 +197,7 @@ Using Jenkins pipeline, deploying a node.js application on a Jenkins slave (priv
     $ curl http://localhost:3000/redis
     ```
 
-### Finally
+### Finally:
 ---
 <p align='center'>
 <img src="screenshots/db-connected.png" alt="architecture" width="80%" height="80%"/>
