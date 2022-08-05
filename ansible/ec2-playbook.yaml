@@ -15,9 +15,12 @@
     - /home/ubuntu/jenkins_home
     - /home/ubuntu/bin
 
-  - name: install jdk
+  - name: install jdk and git
     apt:
-      name: openjdk-8-jdk
+      name: "{{ item }}"
+    loop:
+    - openjdk-11-jdk
+    - git
   - name: copy agent
     copy:
       src: ./agent.jar
