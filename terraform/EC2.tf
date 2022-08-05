@@ -38,4 +38,8 @@ resource "aws_instance" "application" {
   tags = {
     Name = "application-ec2"
   }
+
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} ${var.region} >> private_ips.txt"
+  }
 }
