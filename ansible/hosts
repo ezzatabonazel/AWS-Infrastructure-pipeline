@@ -1,7 +1,7 @@
 [bastion]
-18.203.249.117
+18.202.179.236
 [slave]
-10.0.0.202
+10.0.0.101
 
 [slave:vars]
 ansible_ssh_common_args='-o ProxyCommand="ssh -p 22 -W %h:%p -q ubuntu@bastion"'
