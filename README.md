@@ -1,4 +1,4 @@
-# AWS Infrastructure Pipeline
+# AWS Infrastructure Pipeline and CI-CD NodeJS-app 
 
 ## Architecture
 <img src="screenshots/aws-infra.png"/>
@@ -150,9 +150,62 @@ Press 'save' and 'launch agent'
 <img src="screenshots/ec2slavecheck.png" alt="architecture" width="80%" height="80%"/>
 </p>
 
-## 4- Next Steps: Deploying Node.js App on Slave
-* You will find it in :
-### [CI/CD For Node.js](https://github.com/ezzatabonazel/CI-CD-For-Node.js.git)
+# CI-CD For NodeJS-app 
+
+## Description
+
+Using Jenkins pipeline, deploying a node.js application on a Jenkins slave (private EC2 instance) which also serves to test your application's connectivity to RDS and ElastiCache instances.
+
+## Steps:
+### 1- Prequisites:
+- Make sure you have a Jenkins Slave EC2 instance online and running successfully
+
+- Create a credential for your dockerhub account of type (username and password)
+
+- Edit the Jenkinsfile to include the endpoints of both your RDS and ElastiCache instances 
+
+### 2- Creating and Running Pipeline
+- Create a pipeline as follows:
+<p align='center'>
+<img src="screenshots/cicd.png" alt="architecture" width="80%" height="80%"/>
+</p>
+
+- Then press 'save' and 'Build Now'
+
+<p align='center'>
+<img src="screenshots/build.png" alt="architecture" width="80%" height="80%"/>
+</p>
+
+
+### 3- create ALB with terraform to Expose the Node-js :
+
+### 4- Test your application:
+
+- you can do one of the following:
+
+- You test using the ALB :
+    ```
+    http://ALB_ENDPOINT/
+    http://ALB_ENDPOINT/db
+    http://ALB_ENDPOINT/redis
+    ```
+ - In case above options are not available, then you can ssh into the Jenkins slave, and curl:
+
+    ```bash
+    $ curl http://localhost:3000
+    $ curl http://localhost:3000/db
+    $ curl http://localhost:3000/redis
+    ```
+
+### Finally
+---
+<p align='center'>
+<img src="screenshots/db-connected.png" alt="architecture" width="80%" height="80%"/>
+</p>
+
+<p align='center'>
+<img src="screenshots/db-connected.png" alt="architecture" width="80%" height="80%"/>
+</p>
 
 
 
